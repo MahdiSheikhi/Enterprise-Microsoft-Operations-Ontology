@@ -98,39 +98,12 @@ Employee lifecycle in **Dynamics 365 Human Resources** and learning management v
 
 ---
 
-## 🛠️ How to Use
+## 🛠️ Tools & Resources
 
-### Load in Protégé (recommended)
-1. Download and install [Protégé Desktop](https://protege.stanford.edu/)
-2. Open Protégé → **File → Open** → select `enterprise_microsoft_ontology.rdf`
-3. Use the **Entities** tab to browse classes and properties
-4. Use **OntoGraf** or **OWLViz** plugins to visualize the graph
+### Microsoft Ontology Playground
+**[@microsoft/Ontology-Playground](https://github.com/microsoft/Ontology-Playground)** | [https://microsoft.github.io/Ontology-Playground/](https://microsoft.github.io/Ontology-Playground/)
 
-### Load in a SPARQL / Triple Store
-```bash
-# Example: Apache Jena Fuseki
-./fuseki-server --file=enterprise_microsoft_ontology.rdf /enterprise
-```
-Then query at `http://localhost:3030/enterprise/sparql`.
-
-### Example SPARQL Query — All employees and their departments
-```sparql
-PREFIX ont: <http://example.org/ontology/enterprise-msft/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?employee ?department
-WHERE {
-  ?emp a ont:Employee ;
-       rdfs:label ?employee ;
-       ont:employee_belongs_to_department ?dept .
-  ?dept rdfs:label ?department .
-}
-```
-
-### Validate XML well-formedness
-```bash
-python3 -c "import xml.etree.ElementTree as ET; ET.parse('enterprise_microsoft_ontology.rdf'); print('Valid XML')"
-```
+A free, open-source web application for learning about ontologies and Microsoft Fabric IQ. Explore pre-built ontologies, design your own in a visual editor, export as RDF/XML, and share interactive diagrams — all from a fully static site with zero backend dependencies.
 
 ---
 
@@ -143,15 +116,6 @@ python3 -c "import xml.etree.ElementTree as ET; ET.parse('enterprise_microsoft_o
 | `rdf:` | `http://www.w3.org/1999/02/22-rdf-syntax-ns#` |
 | `rdfs:` | `http://www.w3.org/2000/01/rdf-schema#` |
 | `xsd:` | `http://www.w3.org/2001/XMLSchema#` |
-
----
-
-## 🔨 Tools & Resources
-
-### Microsoft Ontology Playground
-**[@microsoft/Ontology-Playground](https://github.com/microsoft/Ontology-Playground)** | [https://microsoft.github.io/Ontology-Playground/](https://microsoft.github.io/Ontology-Playground/)
-
-A free, open-source web application for learning about ontologies and Microsoft Fabric IQ. Explore pre-built ontologies, design your own in a visual editor, export as RDF/XML, and share interactive diagrams — all from a fully static site with zero backend dependencies.
 
 ---
 
