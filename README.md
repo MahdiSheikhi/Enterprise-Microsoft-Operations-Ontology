@@ -24,6 +24,31 @@ The model covers **30+ entity classes**, **100+ properties**, and **40+ named re
 
 ---
 
+## 📊 Ontology Statistics
+
+| Metric | Count |
+|--------|-------|
+| **Entity Classes** | 30+ |
+| **Properties & Attributes** | 100+ |
+| **Named Relationships** | 40+ |
+| **Functional Domains** | 10 |
+| **Microsoft Services Covered** | 15+ |
+| **OWL Version** | OWL 2 |
+| **RDF Format** | RDF/XML |
+
+**Microsoft Services Included:**
+- Microsoft 365 (Teams, SharePoint, Outlook, OneDrive)
+- Azure (Subscriptions, Resource Groups, Policies, Cost Management)
+- Dynamics 365 (Sales, Customer Service, Finance, Project Operations, Human Resources)
+- Power Platform (Power Apps, Power Automate, Power BI, Dataverse)
+- Microsoft Sentinel & Defender XDR
+- Entra ID (formerly Azure AD)
+- Microsoft Purview
+- Intune
+- Microsoft Viva (Learning, Goals)
+
+---
+
 ## 🗂️ Ontology Scope
 
 The ontology is organized into **10 functional domains**:
@@ -98,12 +123,93 @@ Employee lifecycle in **Dynamics 365 Human Resources** and learning management v
 
 ---
 
+## 🔍 Use Cases
+
+This ontology is valuable for organizations that need to:
+
+### 1. **Enterprise Data Governance**
+- Map and catalog all data assets across the Microsoft ecosystem
+- Establish clear data ownership and stewardship
+- Enforce compliance and retention policies
+- Create audit trails across M365, Azure, and Dynamics 365
+
+### 2. **Knowledge Graph Construction**
+- Build comprehensive enterprise knowledge graphs
+- Link business processes to IT infrastructure
+- Track cross-domain dependencies
+- Enable advanced analytics and pattern discovery
+
+### 3. **Microsoft Ecosystem Mapping**
+- Visualize how Microsoft 365, Azure, Dynamics 365, and Power Platform interconnect
+- Understand the complete operational model
+- Identify integration opportunities
+- Plan cloud migration strategies
+
+### 4. **Compliance & Audit Tracking**
+- Demonstrate regulatory compliance (SOX, HIPAA, GDPR, ISO 27001)
+- Track who has access to what resources
+- Audit security incidents and their impact
+- Generate compliance reports with data lineage
+
+### 5. **Data Lineage & Impact Analysis**
+- Trace data from source to consumption
+- Understand business process flows
+- Perform impact analysis for changes
+- Support incident response investigations
+
+### 6. **Integration Testing Frameworks**
+- Validate integration points between systems
+- Test data consistency across Microsoft services
+- Verify compliance policy enforcement
+- Simulate enterprise scenarios in test environments
+
+### 7. **Master Data Management (MDM)**
+- Establish single source of truth for entities
+- Resolve duplicates across systems
+- Maintain data quality standards
+- Synchronize data across Dynamics 365, M365, and Azure
+
+### 8. **AI & Machine Learning**
+- Train ML models on enterprise ontology for predictive analytics
+- Enable intelligent process automation
+- Support recommendation engines
+- Facilitate natural language querying of enterprise data
+
+---
+
 ## 🛠️ Tools & Resources
 
 ### Microsoft Ontology Playground
 **[@microsoft/Ontology-Playground](https://github.com/microsoft/Ontology-Playground)** | [https://microsoft.github.io/Ontology-Playground/](https://microsoft.github.io/Ontology-Playground/)
 
 A free, open-source web application for learning about ontologies and Microsoft Fabric IQ. Explore pre-built ontologies, design your own in a visual editor, export as RDF/XML, and share interactive diagrams — all from a fully static site with zero backend dependencies.
+
+---
+
+## 🎯 Related Projects
+
+Explore these complementary projects and resources:
+
+### Ontology & Semantic Web
+- **[Protégé Desktop](https://protege.stanford.edu/)** - Industry-standard ontology editor and framework
+- **[Apache Jena](https://jena.apache.org/)** - Java framework for building semantic web applications and SPARQL query endpoints
+- **[RDF4J](https://rdf4j.org/)** - Java framework for working with RDF data
+- **[Virtuoso Open-Source](https://virtuoso.openlinksw.com/wiki/main/)** - RDF triple store with SPARQL endpoint
+
+### Microsoft Enterprise Architecture
+- **[Microsoft Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/)** - Guidance for enterprise cloud transformation
+- **[Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)** - Reference architectures and design patterns
+- **[Enterprise Skills Initiative](https://learn.microsoft.com/en-us/training/)** - Microsoft Learn training paths
+
+### Knowledge Graphs & Data Integration
+- **[LinkedData.org](https://www.linkeddata.org/)** - Linked Data standards and best practices
+- **[Schema.org](https://schema.org/)** - Collaborative, community activity for creating schemas
+- **[YAGO Knowledge Base](https://www.yago-knowledge.org/)** - Large semantic knowledge base
+
+### Governance & Compliance
+- **[Microsoft Purview](https://www.microsoft.com/en-us/security/business/microsoft-purview)** - Unified data governance platform
+- **[Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/)** - Cloud-native SIEM and SOAR
+- **[Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/)** - Governance and compliance management
 
 ---
 
