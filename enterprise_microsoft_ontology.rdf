@@ -1,0 +1,1652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xml:base="http://example.org/ontology/enterprise-msft/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:ont="http://example.org/ontology/enterprise-msft/">
+
+    <owl:Ontology rdf:about="http://example.org/ontology/enterprise-msft/">
+        <rdfs:label>Enterprise Microsoft Operations Ontology</rdfs:label>
+        <rdfs:comment>A comprehensive ontology describing the full operations of a large enterprise company built on the Microsoft technology stack. Covers organizational structure, workforce, projects, assets, IT infrastructure, procurement, licensing, compliance, financials, and integrations across Microsoft 365, Azure, Dynamics 365, Power Platform, and more.</rdfs:comment>
+    </owl:Ontology>
+
+    <!-- ======================================================= -->
+    <!-- ENTITY TYPES (Classes)                                   -->
+    <!-- SECTION 1 – Organization Structure                       -->
+    <!-- ======================================================= -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Company">
+        <rdfs:label>Company</rdfs:label>
+        <rdfs:comment>The top-level legal entity operating the enterprise</rdfs:comment>
+        <ont:icon>🏢</ont:icon>
+        <ont:color>#0078D4</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/BusinessUnit">
+        <rdfs:label>BusinessUnit</rdfs:label>
+        <rdfs:comment>A major operational division of the company (e.g., Finance, Engineering, Sales, Operations)</rdfs:comment>
+        <ont:icon>🏛️</ont:icon>
+        <ont:color>#106EBE</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Department">
+        <rdfs:label>Department</rdfs:label>
+        <rdfs:comment>A functional unit within a Business Unit (e.g., Payroll, DevOps, Enterprise Sales)</rdfs:comment>
+        <ont:icon>📂</ont:icon>
+        <ont:color>#2B88D8</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/CostCenter">
+        <rdfs:label>CostCenter</rdfs:label>
+        <rdfs:comment>A financial tracking unit used in Dynamics 365 Finance for budget and expenditure allocation</rdfs:comment>
+        <ont:icon>💰</ont:icon>
+        <ont:color>#107C10</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Office">
+        <rdfs:label>Office</rdfs:label>
+        <rdfs:comment>A physical or virtual office location of the enterprise</rdfs:comment>
+        <ont:icon>📍</ont:icon>
+        <ont:color>#FFB900</ont:color>
+    </owl:Class>
+
+    <!-- SECTION 2 – People -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Employee">
+        <rdfs:label>Employee</rdfs:label>
+        <rdfs:comment>A full-time or part-time staff member with an Active Directory / Entra ID account</rdfs:comment>
+        <ont:icon>👤</ont:icon>
+        <ont:color>#0078D4</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Contractor">
+        <rdfs:label>Contractor</rdfs:label>
+        <rdfs:comment>An external or temporary worker engaged via a vendor or staffing agency</rdfs:comment>
+        <ont:icon>🧑‍💼</ont:icon>
+        <ont:color>#5C2D91</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Role">
+        <rdfs:label>Role</rdfs:label>
+        <rdfs:comment>A job role or position such as Software Engineer, Project Manager, or CFO</rdfs:comment>
+        <ont:icon>🎭</ont:icon>
+        <ont:color>#D83B01</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Team">
+        <rdfs:label>Team</rdfs:label>
+        <rdfs:comment>A Microsoft Teams group or cross-functional team within the enterprise</rdfs:comment>
+        <ont:icon>👥</ont:icon>
+        <ont:color>#6264A7</ont:color>
+    </owl:Class>
+
+    <!-- SECTION 3 – Projects & Work -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Project">
+        <rdfs:label>Project</rdfs:label>
+        <rdfs:comment>A time-bound initiative tracked in Microsoft Project or Azure DevOps</rdfs:comment>
+        <ont:icon>📋</ont:icon>
+        <ont:color>#0078D4</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Sprint">
+        <rdfs:label>Sprint</rdfs:label>
+        <rdfs:comment>An Agile sprint or iteration tracked in Azure DevOps Boards</rdfs:comment>
+        <ont:icon>🏃</ont:icon>
+        <ont:color>#00A9E0</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/WorkItem">
+        <rdfs:label>WorkItem</rdfs:label>
+        <rdfs:comment>An Azure DevOps work item: Epic, Feature, User Story, Task, or Bug</rdfs:comment>
+        <ont:icon>✅</ont:icon>
+        <ont:color>#107C10</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Milestone">
+        <rdfs:label>Milestone</rdfs:label>
+        <rdfs:comment>A key project deliverable or deadline checkpoint in Microsoft Project</rdfs:comment>
+        <ont:icon>🎯</ont:icon>
+        <ont:color>#FFB900</ont:color>
+    </owl:Class>
+
+    <!-- SECTION 4 – IT Infrastructure (Azure) -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/AzureSubscription">
+        <rdfs:label>AzureSubscription</rdfs:label>
+        <rdfs:comment>A Microsoft Azure billing subscription used by the enterprise</rdfs:comment>
+        <ont:icon>☁️</ont:icon>
+        <ont:color>#0078D4</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/AzureResourceGroup">
+        <rdfs:label>AzureResourceGroup</rdfs:label>
+        <rdfs:comment>A logical container for Azure resources within a subscription</rdfs:comment>
+        <ont:icon>📦</ont:icon>
+        <ont:color>#106EBE</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/AzureResource">
+        <rdfs:label>AzureResource</rdfs:label>
+        <rdfs:comment>An individual Azure resource such as a VM, Storage Account, SQL Database, Key Vault, or Function App</rdfs:comment>
+        <ont:icon>⚙️</ont:icon>
+        <ont:color>#2B88D8</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/AzurePolicy">
+        <rdfs:label>AzurePolicy</rdfs:label>
+        <rdfs:comment>A governance policy applied to Azure resources to enforce compliance rules</rdfs:comment>
+        <ont:icon>🔒</ont:icon>
+        <ont:color>#D83B01</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/EntraIDUser">
+        <rdfs:label>EntraIDUser</rdfs:label>
+        <rdfs:comment>A Microsoft Entra ID (formerly Azure Active Directory) user account</rdfs:comment>
+        <ont:icon>🆔</ont:icon>
+        <ont:color>#5C2D91</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/EntraIDGroup">
+        <rdfs:label>EntraIDGroup</rdfs:label>
+        <rdfs:comment>A security or Microsoft 365 group in Microsoft Entra ID</rdfs:comment>
+        <ont:icon>🛡️</ont:icon>
+        <ont:color>#744DA9</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/ConditionalAccessPolicy">
+        <rdfs:label>ConditionalAccessPolicy</rdfs:label>
+        <rdfs:comment>An Entra ID Conditional Access Policy controlling authentication requirements</rdfs:comment>
+        <ont:icon>🔐</ont:icon>
+        <ont:color>#D83B01</ont:color>
+    </owl:Class>
+
+    <!-- SECTION 5 – Microsoft 365 Collaboration -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/M365Tenant">
+        <rdfs:label>M365Tenant</rdfs:label>
+        <rdfs:comment>The enterprise's Microsoft 365 tenant — the root of all M365 services</rdfs:comment>
+        <ont:icon>🌐</ont:icon>
+        <ont:color>#0078D4</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/TeamsChannel">
+        <rdfs:label>TeamsChannel</rdfs:label>
+        <rdfs:comment>A Microsoft Teams channel used for departmental or project communication</rdfs:comment>
+        <ont:icon>💬</ont:icon>
+        <ont:color>#6264A7</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/SharePointSite">
+        <rdfs:label>SharePointSite</rdfs:label>
+        <rdfs:comment>A SharePoint Online site used for document management, intranet pages, or team collaboration</rdfs:comment>
+        <ont:icon>📄</ont:icon>
+        <ont:color>#038387</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/OneDriveDrive">
+        <rdfs:label>OneDriveDrive</rdfs:label>
+        <rdfs:comment>An employee's OneDrive for Business storage drive</rdfs:comment>
+        <ont:icon>🗂️</ont:icon>
+        <ont:color>#0078D4</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/OutlookMailbox">
+        <rdfs:label>OutlookMailbox</rdfs:label>
+        <rdfs:comment>An Exchange Online mailbox associated with an employee or shared account</rdfs:comment>
+        <ont:icon>📧</ont:icon>
+        <ont:color>#0072C6</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/CalendarEvent">
+        <rdfs:label>CalendarEvent</rdfs:label>
+        <rdfs:comment>A meeting or event scheduled via Outlook or Teams Calendar</rdfs:comment>
+        <ont:icon>📅</ont:icon>
+        <ont:color>#106EBE</ont:color>
+    </owl:Class>
+
+    <!-- SECTION 6 – Power Platform -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/PowerApp">
+        <rdfs:label>PowerApp</rdfs:label>
+        <rdfs:comment>A canvas or model-driven app built with Microsoft Power Apps</rdfs:comment>
+        <ont:icon>⚡</ont:icon>
+        <ont:color>#742774</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/PowerAutomateFlow">
+        <rdfs:label>PowerAutomateFlow</rdfs:label>
+        <rdfs:comment>An automated workflow created in Microsoft Power Automate (formerly Flow)</rdfs:comment>
+        <ont:icon>🔄</ont:icon>
+        <ont:color>#0066FF</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/PowerBIReport">
+        <rdfs:label>PowerBIReport</rdfs:label>
+        <rdfs:comment>A Power BI report or dashboard used for enterprise analytics and KPI reporting</rdfs:comment>
+        <ont:icon>📊</ont:icon>
+        <ont:color>#F2C811</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/PowerBIDataset">
+        <rdfs:label>PowerBIDataset</rdfs:label>
+        <rdfs:comment>A semantic model (dataset) powering Power BI reports</rdfs:comment>
+        <ont:icon>🗄️</ont:icon>
+        <ont:color>#C8A600</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/DataverseTable">
+        <rdfs:label>DataverseTable</rdfs:label>
+        <rdfs:comment>A Microsoft Dataverse table storing business data used across Power Platform and Dynamics 365</rdfs:comment>
+        <ont:icon>🗃️</ont:icon>
+        <ont:color>#038387</ont:color>
+    </owl:Class>
+
+    <!-- SECTION 7 – Dynamics 365 & Business Applications -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/D365Environment">
+        <rdfs:label>D365Environment</rdfs:label>
+        <rdfs:comment>A Dynamics 365 environment (Production, Sandbox, Development)</rdfs:comment>
+        <ont:icon>🌍</ont:icon>
+        <ont:color>#D83B01</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/CRMAccount">
+        <rdfs:label>CRMAccount</rdfs:label>
+        <rdfs:comment>A customer or partner account record in Dynamics 365 Sales or Customer Service</rdfs:comment>
+        <ont:icon>🏪</ont:icon>
+        <ont:color>#0078D4</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/CRMContact">
+        <rdfs:label>CRMContact</rdfs:label>
+        <rdfs:comment>A contact record linked to a CRM account in Dynamics 365</rdfs:comment>
+        <ont:icon>👤</ont:icon>
+        <ont:color>#2B88D8</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/SalesOpportunity">
+        <rdfs:label>SalesOpportunity</rdfs:label>
+        <rdfs:comment>A sales pipeline opportunity tracked in Dynamics 365 Sales</rdfs:comment>
+        <ont:icon>💼</ont:icon>
+        <ont:color>#107C10</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/SalesQuote">
+        <rdfs:label>SalesQuote</rdfs:label>
+        <rdfs:comment>A formal price quote issued to a prospect or customer via Dynamics 365 Sales</rdfs:comment>
+        <ont:icon>🧾</ont:icon>
+        <ont:color>#5C2D91</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/SalesOrder">
+        <rdfs:label>SalesOrder</rdfs:label>
+        <rdfs:comment>A confirmed sales order in Dynamics 365 Sales integrated with Finance and Operations</rdfs:comment>
+        <ont:icon>📦</ont:icon>
+        <ont:color>#D83B01</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/ServiceCase">
+        <rdfs:label>ServiceCase</rdfs:label>
+        <rdfs:comment>A customer support case managed in Dynamics 365 Customer Service</rdfs:comment>
+        <ont:icon>🎧</ont:icon>
+        <ont:color>#00A9E0</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/FinanceJournal">
+        <rdfs:label>FinanceJournal</rdfs:label>
+        <rdfs:comment>A general ledger or sub-ledger journal entry in Dynamics 365 Finance</rdfs:comment>
+        <ont:icon>📒</ont:icon>
+        <ont:color>#107C10</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/PurchaseOrder">
+        <rdfs:label>PurchaseOrder</rdfs:label>
+        <rdfs:comment>A procurement purchase order raised in Dynamics 365 Supply Chain Management or Finance</rdfs:comment>
+        <ont:icon>🛒</ont:icon>
+        <ont:color>#FFB900</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Vendor">
+        <rdfs:label>Vendor</rdfs:label>
+        <rdfs:comment>An external vendor or supplier registered in Dynamics 365 Finance or Procurement</rdfs:comment>
+        <ont:icon>🚚</ont:icon>
+        <ont:color>#D83B01</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/Invoice">
+        <rdfs:label>Invoice</rdfs:label>
+        <rdfs:comment>A vendor or customer invoice processed through Dynamics 365 Finance accounts payable or receivable</rdfs:comment>
+        <ont:icon>📑</ont:icon>
+        <ont:color>#5C2D91</ont:color>
+    </owl:Class>
+
+    <!-- SECTION 8 – Asset & License Management -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/HardwareAsset">
+        <rdfs:label>HardwareAsset</rdfs:label>
+        <rdfs:comment>A physical hardware asset (laptop, desktop, server, phone) tracked in the enterprise CMDB or Intune</rdfs:comment>
+        <ont:icon>💻</ont:icon>
+        <ont:color>#0078D4</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/SoftwareLicense">
+        <rdfs:label>SoftwareLicense</rdfs:label>
+        <rdfs:comment>A Microsoft or third-party software license assigned to an employee or device, tracked via Microsoft 365 Admin Center or VLSC</rdfs:comment>
+        <ont:icon>🔑</ont:icon>
+        <ont:color>#D83B01</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/IntuneDevice">
+        <rdfs:label>IntuneDevice</rdfs:label>
+        <rdfs:comment>A device enrolled and managed by Microsoft Intune (MDM/MAM)</rdfs:comment>
+        <ont:icon>📱</ont:icon>
+        <ont:color>#00A9E0</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/CompliancePolicy">
+        <rdfs:label>CompliancePolicy</rdfs:label>
+        <rdfs:comment>A Microsoft Purview or Intune compliance policy applied to devices or data</rdfs:comment>
+        <ont:icon>📜</ont:icon>
+        <ont:color>#107C10</ont:color>
+    </owl:Class>
+
+    <!-- SECTION 9 – Security & Governance -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/SecurityIncident">
+        <rdfs:label>SecurityIncident</rdfs:label>
+        <rdfs:comment>A security incident logged in Microsoft Sentinel or Defender XDR</rdfs:comment>
+        <ont:icon>🚨</ont:icon>
+        <ont:color>#D83B01</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/DefenderAlert">
+        <rdfs:label>DefenderAlert</rdfs:label>
+        <rdfs:comment>An alert raised by Microsoft Defender for Endpoint, Identity, Cloud, or Office 365</rdfs:comment>
+        <ont:icon>⚠️</ont:icon>
+        <ont:color>#FFB900</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/DataClassification">
+        <rdfs:label>DataClassification</rdfs:label>
+        <rdfs:comment>A Microsoft Purview sensitivity label or information protection classification applied to data</rdfs:comment>
+        <ont:icon>🏷️</ont:icon>
+        <ont:color>#5C2D91</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/AuditLog">
+        <rdfs:label>AuditLog</rdfs:label>
+        <rdfs:comment>A unified audit log entry from Microsoft Purview Audit recording user or admin activities</rdfs:comment>
+        <ont:icon>📋</ont:icon>
+        <ont:color>#107C10</ont:color>
+    </owl:Class>
+
+    <!-- SECTION 10 – HR & Training -->
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/HRRecord">
+        <rdfs:label>HRRecord</rdfs:label>
+        <rdfs:comment>An employee HR record in Dynamics 365 Human Resources covering employment details, payroll, and benefits</rdfs:comment>
+        <ont:icon>📁</ont:icon>
+        <ont:color>#0078D4</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/TrainingCourse">
+        <rdfs:label>TrainingCourse</rdfs:label>
+        <rdfs:comment>A learning course published via Microsoft Viva Learning or an integrated LMS</rdfs:comment>
+        <ont:icon>🎓</ont:icon>
+        <ont:color>#744DA9</ont:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/enterprise-msft/PerformanceReview">
+        <rdfs:label>PerformanceReview</rdfs:label>
+        <rdfs:comment>An employee performance review cycle tracked in Dynamics 365 HR or Viva Goals</rdfs:comment>
+        <ont:icon>⭐</ont:icon>
+        <ont:color>#FFB900</ont:color>
+    </owl:Class>
+
+    <!-- ================================================================ -->
+    <!-- DATA PROPERTIES                                                   -->
+    <!-- ================================================================ -->
+
+    <!-- Company -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/company_companyId">
+        <rdfs:label>companyId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique company identifier (e.g., used in Dynamics 365 legal entity code)</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/company_legalName">
+        <rdfs:label>legalName</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Official registered legal name of the company</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/company_tenantId">
+        <rdfs:label>tenantId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Microsoft Entra ID tenant GUID associated with the company's Microsoft 365 tenant</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/company_domainName">
+        <rdfs:label>domainName</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Primary email domain (e.g., contoso.com) registered with Microsoft 365</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/company_industry">
+        <rdfs:label>industry</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Industry sector of the company (e.g., Financial Services, Manufacturing, Retail)</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/company_headquartersCity">
+        <rdfs:label>headquartersCity</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>City where the company headquarters is located</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/company_employeeCount">
+        <rdfs:label>employeeCount</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total number of employees across all offices</rdfs:comment>
+        <ont:propertyType>integer</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/company_annualRevenue">
+        <rdfs:label>annualRevenue</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Most recent annual revenue in USD</rdfs:comment>
+        <ont:unit>USD</ont:unit>
+        <ont:propertyType>decimal</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- BusinessUnit -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/businessUnit_unitId">
+        <rdfs:label>unitId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/BusinessUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique business unit identifier</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/businessUnit_name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/BusinessUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the business unit (e.g., Finance, Technology, Operations)</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/businessUnit_headcount">
+        <rdfs:label>headcount</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/BusinessUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of employees in this business unit</rdfs:comment>
+        <ont:propertyType>integer</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/businessUnit_annualBudget">
+        <rdfs:label>annualBudget</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/BusinessUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Annual operating budget allocated to this unit in Dynamics 365 Finance</rdfs:comment>
+        <ont:unit>USD</ont:unit>
+        <ont:propertyType>decimal</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- Department -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/department_deptId">
+        <rdfs:label>deptId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Department"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique department code used in Dynamics 365 HR and Finance</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/department_name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Department"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Department name (e.g., Cloud Engineering, Accounts Payable)</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/department_costCenterCode">
+        <rdfs:label>costCenterCode</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Department"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Cost center code linked to this department in the chart of accounts</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- Employee -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_employeeId">
+        <rdfs:label>employeeId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique employee ID used across Dynamics 365 HR, Entra ID, and payroll systems</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_displayName">
+        <rdfs:label>displayName</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Full display name as shown in Microsoft 365 and Entra ID</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_upn">
+        <rdfs:label>userPrincipalName</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>User Principal Name (UPN) used for Microsoft 365, Teams, and Azure sign-in</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_jobTitle">
+        <rdfs:label>jobTitle</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Official job title as registered in Entra ID and Dynamics 365 HR</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_employmentType">
+        <rdfs:label>employmentType</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Employment classification</rdfs:comment>
+        <ont:enumValues>FullTime,PartTime,Intern,Temporary</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_hireDate">
+        <rdfs:label>hireDate</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date the employee was hired</rdfs:comment>
+        <ont:propertyType>date</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_officeLocation">
+        <rdfs:label>officeLocation</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Physical office location as stored in Entra ID profile</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_workMode">
+        <rdfs:label>workMode</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Work arrangement mode for the employee</rdfs:comment>
+        <ont:enumValues>OnSite,Remote,Hybrid</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_annualSalary">
+        <rdfs:label>annualSalary</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Employee annual salary (stored securely in Dynamics 365 HR, restricted access)</rdfs:comment>
+        <ont:unit>USD</ont:unit>
+        <ont:propertyType>decimal</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- Project -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/project_projectId">
+        <rdfs:label>projectId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique project identifier used across Azure DevOps and Dynamics 365 Project Operations</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/project_name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Project name as registered in Azure DevOps or Project Operations</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/project_status">
+        <rdfs:label>status</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Current project delivery status</rdfs:comment>
+        <ont:enumValues>Planning,Active,OnHold,Completed,Cancelled</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/project_startDate">
+        <rdfs:label>startDate</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Project start date</rdfs:comment>
+        <ont:propertyType>date</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/project_endDate">
+        <rdfs:label>endDate</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Project planned or actual end date</rdfs:comment>
+        <ont:propertyType>date</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/project_budget">
+        <rdfs:label>budget</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Approved project budget in Dynamics 365 Project Operations</rdfs:comment>
+        <ont:unit>USD</ont:unit>
+        <ont:propertyType>decimal</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/project_methodology">
+        <rdfs:label>methodology</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Delivery methodology used for the project</rdfs:comment>
+        <ont:enumValues>Agile,Scrum,Kanban,Waterfall,SAFe,Hybrid</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- WorkItem -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/workItem_itemId">
+        <rdfs:label>itemId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/WorkItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Azure DevOps work item unique ID</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/workItem_type">
+        <rdfs:label>type</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/WorkItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Azure DevOps work item type</rdfs:comment>
+        <ont:enumValues>Epic,Feature,UserStory,Task,Bug,TestCase</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/workItem_title">
+        <rdfs:label>title</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/WorkItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Title of the work item</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/workItem_state">
+        <rdfs:label>state</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/WorkItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Current workflow state in Azure DevOps</rdfs:comment>
+        <ont:enumValues>New,Active,Resolved,Closed,Removed</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/workItem_storyPoints">
+        <rdfs:label>storyPoints</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/WorkItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Effort estimate in story points (Azure DevOps planning)</rdfs:comment>
+        <ont:propertyType>integer</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- AzureResource -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/azureResource_resourceId">
+        <rdfs:label>resourceId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzureResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Full Azure Resource Manager (ARM) resource ID</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/azureResource_resourceType">
+        <rdfs:label>resourceType</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzureResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Azure resource type (e.g., Microsoft.Compute/virtualMachines, Microsoft.Sql/servers)</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/azureResource_region">
+        <rdfs:label>region</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzureResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Azure region where the resource is deployed (e.g., eastus, westeurope)</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/azureResource_sku">
+        <rdfs:label>sku</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzureResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Azure SKU / pricing tier for the resource (e.g., Standard_D4s_v3, S2)</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/azureResource_monthlyEstimatedCost">
+        <rdfs:label>monthlyEstimatedCost</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzureResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Estimated monthly Azure cost from Azure Cost Management</rdfs:comment>
+        <ont:unit>USD</ont:unit>
+        <ont:propertyType>decimal</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/azureResource_provisioningState">
+        <rdfs:label>provisioningState</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzureResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Azure ARM provisioning state of the resource</rdfs:comment>
+        <ont:enumValues>Succeeded,Failed,Updating,Deleting,Creating</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- SoftwareLicense -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/softwareLicense_licenseId">
+        <rdfs:label>licenseId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SoftwareLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique license identifier from Microsoft 365 Admin Center or VLSC</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/softwareLicense_productName">
+        <rdfs:label>productName</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SoftwareLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Microsoft product or SKU name (e.g., Microsoft 365 E5, Dynamics 365 Sales Enterprise, Power BI Premium)</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/softwareLicense_licenseType">
+        <rdfs:label>licenseType</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SoftwareLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Microsoft licensing program type</rdfs:comment>
+        <ont:enumValues>EA,CSP,MCA,SPLA,MPSA,Retail</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/softwareLicense_quantity">
+        <rdfs:label>quantity</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SoftwareLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total number of license seats purchased</rdfs:comment>
+        <ont:propertyType>integer</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/softwareLicense_assignedCount">
+        <rdfs:label>assignedCount</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SoftwareLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of seats currently assigned to users</rdfs:comment>
+        <ont:propertyType>integer</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/softwareLicense_renewalDate">
+        <rdfs:label>renewalDate</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SoftwareLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>License renewal or expiry date</rdfs:comment>
+        <ont:propertyType>date</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/softwareLicense_annualCost">
+        <rdfs:label>annualCost</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SoftwareLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Total annual license cost billed to the company</rdfs:comment>
+        <ont:unit>USD</ont:unit>
+        <ont:propertyType>decimal</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- PowerBIReport -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/powerBIReport_reportId">
+        <rdfs:label>reportId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PowerBIReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Power BI report GUID from the Power BI service</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/powerBIReport_name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PowerBIReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Display name of the Power BI report</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/powerBIReport_workspace">
+        <rdfs:label>workspace</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PowerBIReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Power BI workspace (app workspace) where the report is published</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/powerBIReport_refreshFrequency">
+        <rdfs:label>refreshFrequency</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PowerBIReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Scheduled data refresh frequency for the report's dataset</rdfs:comment>
+        <ont:enumValues>Realtime,Hourly,Daily,Weekly,Manual</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- SalesOpportunity -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOpportunity_opportunityId">
+        <rdfs:label>opportunityId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOpportunity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique opportunity ID in Dynamics 365 Sales</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOpportunity_name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOpportunity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Opportunity name as registered in Dynamics 365 Sales pipeline</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOpportunity_stage">
+        <rdfs:label>stage</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOpportunity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Current sales pipeline stage in Dynamics 365 Sales</rdfs:comment>
+        <ont:enumValues>Qualify,Develop,Propose,Close,Won,Lost</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOpportunity_estimatedValue">
+        <rdfs:label>estimatedValue</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOpportunity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Estimated deal value in Dynamics 365 Sales</rdfs:comment>
+        <ont:unit>USD</ont:unit>
+        <ont:propertyType>decimal</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOpportunity_closeProbability">
+        <rdfs:label>closeProbability</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOpportunity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Probability of closing the opportunity (0-100%), used in Dynamics 365 Sales forecasting</rdfs:comment>
+        <ont:propertyType>integer</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOpportunity_estimatedCloseDate">
+        <rdfs:label>estimatedCloseDate</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOpportunity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Expected close date of the sales opportunity</rdfs:comment>
+        <ont:propertyType>date</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- SecurityIncident -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/securityIncident_incidentId">
+        <rdfs:label>incidentId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SecurityIncident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique incident ID from Microsoft Sentinel or Defender XDR portal</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/securityIncident_severity">
+        <rdfs:label>severity</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SecurityIncident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Incident severity as classified in Microsoft Sentinel</rdfs:comment>
+        <ont:enumValues>Informational,Low,Medium,High,Critical</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/securityIncident_status">
+        <rdfs:label>status</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SecurityIncident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Current investigation status of the incident</rdfs:comment>
+        <ont:enumValues>New,Active,Resolved,Closed,FalsePositive</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/securityIncident_detectedAt">
+        <rdfs:label>detectedAt</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SecurityIncident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Timestamp when the incident was first detected in Microsoft Sentinel</rdfs:comment>
+        <ont:propertyType>datetime</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- HardwareAsset -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/hardwareAsset_assetId">
+        <rdfs:label>assetId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/HardwareAsset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique hardware asset tag number</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/hardwareAsset_assetType">
+        <rdfs:label>assetType</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/HardwareAsset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Type of hardware asset</rdfs:comment>
+        <ont:enumValues>Laptop,Desktop,Server,MobilePhone,Tablet,NetworkSwitch,Printer,Monitor</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/hardwareAsset_serialNumber">
+        <rdfs:label>serialNumber</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/HardwareAsset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Manufacturer serial number of the hardware asset</rdfs:comment>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/hardwareAsset_purchaseDate">
+        <rdfs:label>purchaseDate</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/HardwareAsset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date the hardware was purchased</rdfs:comment>
+        <ont:propertyType>date</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/hardwareAsset_warrantyExpiry">
+        <rdfs:label>warrantyExpiry</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/HardwareAsset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Warranty expiry date for the hardware asset</rdfs:comment>
+        <ont:propertyType>date</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/hardwareAsset_purchaseCost">
+        <rdfs:label>purchaseCost</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/HardwareAsset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Original purchase cost of the hardware asset</rdfs:comment>
+        <ont:unit>USD</ont:unit>
+        <ont:propertyType>decimal</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- Invoice -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/invoice_invoiceId">
+        <rdfs:label>invoiceId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique invoice number in Dynamics 365 Finance</rdfs:comment>
+        <ont:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isIdentifier>
+        <ont:propertyType>string</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/invoice_invoiceDate">
+        <rdfs:label>invoiceDate</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date the invoice was issued or received</rdfs:comment>
+        <ont:propertyType>date</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/invoice_dueDate">
+        <rdfs:label>dueDate</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Payment due date for the invoice</rdfs:comment>
+        <ont:propertyType>date</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/invoice_amount">
+        <rdfs:label>amount</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Total invoice amount</rdfs:comment>
+        <ont:unit>USD</ont:unit>
+        <ont:propertyType>decimal</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/enterprise-msft/invoice_paymentStatus">
+        <rdfs:label>paymentStatus</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Payment status of the invoice in Dynamics 365 Finance</rdfs:comment>
+        <ont:enumValues>Pending,PartiallyPaid,Paid,Overdue,Disputed,Cancelled</ont:enumValues>
+        <ont:propertyType>enum</ont:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- ================================================================ -->
+    <!-- OBJECT PROPERTIES (Relationships)                                 -->
+    <!-- ================================================================ -->
+
+    <!-- Company → BusinessUnit -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/company_has_businessUnit">
+        <rdfs:label>hasBusinessUnit</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/BusinessUnit"/>
+        <rdfs:comment>A company is organized into multiple business units</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>company</ont:fromEntityId>
+        <ont:toEntityId>businessUnit</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- BusinessUnit → Department -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/businessUnit_contains_department">
+        <rdfs:label>containsDepartment</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/BusinessUnit"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Department"/>
+        <rdfs:comment>A business unit contains one or more departments</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>businessUnit</ont:fromEntityId>
+        <ont:toEntityId>department</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Department → CostCenter -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/department_mapped_to_costCenter">
+        <rdfs:label>mappedToCostCenter</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Department"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/CostCenter"/>
+        <rdfs:comment>A department is mapped to a cost center in Dynamics 365 Finance for budget tracking</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>department</ont:fromEntityId>
+        <ont:toEntityId>costCenter</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → Department -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_belongs_to_department">
+        <rdfs:label>belongsToDepartment</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Department"/>
+        <rdfs:comment>An employee belongs to a department as recorded in Dynamics 365 HR and Entra ID</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>department</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → Employee (manager) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_reports_to_employee">
+        <rdfs:label>reportsTo</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:comment>Manager relationship between employees as configured in Entra ID and Dynamics 365 HR org chart</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>employee</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → Role -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_assigned_role">
+        <rdfs:label>assignedRole</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Role"/>
+        <rdfs:comment>A role assigned to an employee within the organization</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>role</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → EntraIDUser -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_has_entraIdUser">
+        <rdfs:label>hasEntraIdUser</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/EntraIDUser"/>
+        <rdfs:comment>Each employee has a corresponding Microsoft Entra ID identity record</rdfs:comment>
+        <ont:cardinality>one-to-one</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>entraIDUser</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → OutlookMailbox -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_has_mailbox">
+        <rdfs:label>hasMailbox</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/OutlookMailbox"/>
+        <rdfs:comment>An employee is provisioned an Exchange Online mailbox through Microsoft 365</rdfs:comment>
+        <ont:cardinality>one-to-one</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>outlookMailbox</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → OneDriveDrive -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_has_oneDrive">
+        <rdfs:label>hasOneDrive</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/OneDriveDrive"/>
+        <rdfs:comment>An employee is provisioned a OneDrive for Business storage drive in Microsoft 365</rdfs:comment>
+        <ont:cardinality>one-to-one</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>oneDriveDrive</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → SoftwareLicense -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_assigned_license">
+        <rdfs:label>assignedLicense</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/SoftwareLicense"/>
+        <rdfs:comment>Microsoft 365 or Dynamics 365 licenses assigned to an employee via the M365 Admin Center</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>softwareLicense</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → HardwareAsset -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_uses_hardwareAsset">
+        <rdfs:label>usesHardwareAsset</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/HardwareAsset"/>
+        <rdfs:comment>A hardware asset (laptop, phone) assigned to and used by an employee</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>hardwareAsset</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → HRRecord -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_has_hrRecord">
+        <rdfs:label>hasHRRecord</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/HRRecord"/>
+        <rdfs:comment>An employee has a corresponding HR record in Dynamics 365 Human Resources</rdfs:comment>
+        <ont:cardinality>one-to-one</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>hRRecord</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → Team -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_member_of_team">
+        <rdfs:label>memberOfTeam</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Team"/>
+        <rdfs:comment>An employee is a member of one or more Microsoft Teams groups</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>team</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Team → TeamsChannel -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/team_has_channel">
+        <rdfs:label>hasChannel</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Team"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/TeamsChannel"/>
+        <rdfs:comment>A Microsoft Teams group has one or more channels for communication</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>team</ont:fromEntityId>
+        <ont:toEntityId>teamsChannel</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Team → SharePointSite -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/team_has_sharePointSite">
+        <rdfs:label>hasSharePointSite</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Team"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/SharePointSite"/>
+        <rdfs:comment>Each Microsoft Team automatically provisions a linked SharePoint Online team site</rdfs:comment>
+        <ont:cardinality>one-to-one</ont:cardinality>
+        <ont:fromEntityId>team</ont:fromEntityId>
+        <ont:toEntityId>sharePointSite</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Project → Department -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/project_owned_by_department">
+        <rdfs:label>ownedByDepartment</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Department"/>
+        <rdfs:comment>A project is owned and budgeted under a specific department</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>project</ont:fromEntityId>
+        <ont:toEntityId>department</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Project → Employee (Project Manager) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/project_managed_by_employee">
+        <rdfs:label>managedBy</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:comment>The employee serving as Project Manager in Azure DevOps or Project Operations</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>project</ont:fromEntityId>
+        <ont:toEntityId>employee</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Project → Employee (Members) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/project_has_member_employee">
+        <rdfs:label>hasMember</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:comment>Employees assigned to work on the project as team members in Azure DevOps</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>project</ont:fromEntityId>
+        <ont:toEntityId>employee</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Project → Sprint -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/project_has_sprint">
+        <rdfs:label>hasSprint</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Sprint"/>
+        <rdfs:comment>A project is executed through multiple Azure DevOps sprints</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>project</ont:fromEntityId>
+        <ont:toEntityId>sprint</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Sprint → WorkItem -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/sprint_contains_workItem">
+        <rdfs:label>containsWorkItem</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Sprint"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/WorkItem"/>
+        <rdfs:comment>A sprint contains work items (tasks, stories, bugs) committed for delivery</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>sprint</ont:fromEntityId>
+        <ont:toEntityId>workItem</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- WorkItem → Employee (Assigned To) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/workItem_assigned_to_employee">
+        <rdfs:label>assignedTo</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/WorkItem"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:comment>The employee a work item is assigned to in Azure DevOps Boards</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>workItem</ont:fromEntityId>
+        <ont:toEntityId>employee</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Project → AzureResourceGroup -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/project_uses_azureResourceGroup">
+        <rdfs:label>usesResourceGroup</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Project"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/AzureResourceGroup"/>
+        <rdfs:comment>A project provisions and uses one or more Azure resource groups for infrastructure</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>project</ont:fromEntityId>
+        <ont:toEntityId>azureResourceGroup</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- AzureSubscription → AzureResourceGroup -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/azureSubscription_contains_resourceGroup">
+        <rdfs:label>containsResourceGroup</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzureSubscription"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/AzureResourceGroup"/>
+        <rdfs:comment>An Azure subscription contains multiple resource groups for workload organization</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>azureSubscription</ont:fromEntityId>
+        <ont:toEntityId>azureResourceGroup</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- AzureResourceGroup → AzureResource -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/azureResourceGroup_contains_resource">
+        <rdfs:label>containsResource</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzureResourceGroup"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/AzureResource"/>
+        <rdfs:comment>An Azure resource group contains the individual resources that constitute the workload</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>azureResourceGroup</ont:fromEntityId>
+        <ont:toEntityId>azureResource</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- AzurePolicy → AzureSubscription -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/azurePolicy_applied_to_subscription">
+        <rdfs:label>appliedToSubscription</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzurePolicy"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/AzureSubscription"/>
+        <rdfs:comment>An Azure Policy is assigned to a subscription to enforce governance standards</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>azurePolicy</ont:fromEntityId>
+        <ont:toEntityId>azureSubscription</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- EntraIDUser → EntraIDGroup -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/entraIdUser_member_of_group">
+        <rdfs:label>memberOfGroup</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/EntraIDUser"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/EntraIDGroup"/>
+        <rdfs:comment>An Entra ID user belongs to one or more security or M365 groups</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>entraIDUser</ont:fromEntityId>
+        <ont:toEntityId>entraIDGroup</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- HardwareAsset → IntuneDevice -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/hardwareAsset_enrolled_as_intuneDevice">
+        <rdfs:label>enrolledAsIntuneDevice</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/HardwareAsset"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/IntuneDevice"/>
+        <rdfs:comment>A hardware asset is enrolled and managed as a device in Microsoft Intune</rdfs:comment>
+        <ont:cardinality>one-to-one</ont:cardinality>
+        <ont:fromEntityId>hardwareAsset</ont:fromEntityId>
+        <ont:toEntityId>intuneDevice</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- IntuneDevice → CompliancePolicy -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/intuneDevice_governed_by_compliancePolicy">
+        <rdfs:label>governedByCompliancePolicy</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/IntuneDevice"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/CompliancePolicy"/>
+        <rdfs:comment>One or more Microsoft Intune compliance policies are applied to the device</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>intuneDevice</ont:fromEntityId>
+        <ont:toEntityId>compliancePolicy</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- SecurityIncident → DefenderAlert -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/securityIncident_triggered_by_defenderAlert">
+        <rdfs:label>triggeredByAlert</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SecurityIncident"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/DefenderAlert"/>
+        <rdfs:comment>A Microsoft Sentinel incident is correlated from one or more Defender alerts</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>securityIncident</ont:fromEntityId>
+        <ont:toEntityId>defenderAlert</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- SecurityIncident → Employee (Assigned Investigator) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/securityIncident_assigned_to_employee">
+        <rdfs:label>assignedToInvestigator</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SecurityIncident"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:comment>The security analyst employee responsible for investigating the incident in Sentinel</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>securityIncident</ont:fromEntityId>
+        <ont:toEntityId>employee</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- PowerBIReport → PowerBIDataset -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/powerBIReport_uses_dataset">
+        <rdfs:label>usesDataset</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PowerBIReport"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/PowerBIDataset"/>
+        <rdfs:comment>A Power BI report is bound to and powered by a semantic dataset</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>powerBIReport</ont:fromEntityId>
+        <ont:toEntityId>powerBIDataset</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- PowerBIDataset → DataverseTable -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/powerBIDataset_sourced_from_dataverseTable">
+        <rdfs:label>sourcedFromDataverse</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PowerBIDataset"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/DataverseTable"/>
+        <rdfs:comment>A Power BI semantic dataset pulls data from Dataverse tables via DirectQuery or import mode</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>powerBIDataset</ont:fromEntityId>
+        <ont:toEntityId>dataverseTable</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- PowerAutomateFlow → PowerApp -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/powerAutomateFlow_triggered_by_powerApp">
+        <rdfs:label>triggeredByApp</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PowerAutomateFlow"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/PowerApp"/>
+        <rdfs:comment>A Power Automate flow is triggered from a button or event in a Power Apps canvas or model-driven app</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>powerAutomateFlow</ont:fromEntityId>
+        <ont:toEntityId>powerApp</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- PowerAutomateFlow → DataverseTable -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/powerAutomateFlow_writes_to_dataverseTable">
+        <rdfs:label>writesToDataverse</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PowerAutomateFlow"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/DataverseTable"/>
+        <rdfs:comment>A Power Automate flow creates or updates records in Microsoft Dataverse tables</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>powerAutomateFlow</ont:fromEntityId>
+        <ont:toEntityId>dataverseTable</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- SalesOpportunity → CRMAccount -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOpportunity_linked_to_account">
+        <rdfs:label>linkedToAccount</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOpportunity"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/CRMAccount"/>
+        <rdfs:comment>A sales opportunity is associated with a customer account in Dynamics 365 Sales</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>salesOpportunity</ont:fromEntityId>
+        <ont:toEntityId>cRMAccount</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- SalesOpportunity → Employee (Owner) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOpportunity_owned_by_employee">
+        <rdfs:label>ownedByEmployee</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOpportunity"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:comment>The sales representative who owns the opportunity in Dynamics 365 Sales</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>salesOpportunity</ont:fromEntityId>
+        <ont:toEntityId>employee</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- SalesOpportunity → SalesQuote -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOpportunity_has_quote">
+        <rdfs:label>hasQuote</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOpportunity"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/SalesQuote"/>
+        <rdfs:comment>A sales opportunity can have one or more quotes issued to the customer</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>salesOpportunity</ont:fromEntityId>
+        <ont:toEntityId>salesQuote</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- SalesQuote → SalesOrder -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/salesQuote_converted_to_order">
+        <rdfs:label>convertedToOrder</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesQuote"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/SalesOrder"/>
+        <rdfs:comment>An accepted sales quote is converted into a sales order in Dynamics 365 Sales and Finance</rdfs:comment>
+        <ont:cardinality>one-to-one</ont:cardinality>
+        <ont:fromEntityId>salesQuote</ont:fromEntityId>
+        <ont:toEntityId>salesOrder</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- SalesOrder → Invoice -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/salesOrder_generates_invoice">
+        <rdfs:label>generatesInvoice</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/SalesOrder"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Invoice"/>
+        <rdfs:comment>A fulfilled sales order generates a customer invoice in Dynamics 365 Finance accounts receivable</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>salesOrder</ont:fromEntityId>
+        <ont:toEntityId>invoice</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- CRMAccount → CRMContact -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/crmAccount_has_contact">
+        <rdfs:label>hasContact</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/CRMAccount"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/CRMContact"/>
+        <rdfs:comment>A CRM account has one or more associated contact records in Dynamics 365</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>cRMAccount</ont:fromEntityId>
+        <ont:toEntityId>cRMContact</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- CRMAccount → ServiceCase -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/crmAccount_has_serviceCase">
+        <rdfs:label>hasServiceCase</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/CRMAccount"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/ServiceCase"/>
+        <rdfs:comment>A customer account can have multiple support cases in Dynamics 365 Customer Service</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>cRMAccount</ont:fromEntityId>
+        <ont:toEntityId>serviceCase</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- PurchaseOrder → Vendor -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/purchaseOrder_issued_to_vendor">
+        <rdfs:label>issuedToVendor</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PurchaseOrder"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Vendor"/>
+        <rdfs:comment>A purchase order is issued to an approved vendor in Dynamics 365 Finance procurement</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>purchaseOrder</ont:fromEntityId>
+        <ont:toEntityId>vendor</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- PurchaseOrder → Invoice -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/purchaseOrder_matched_to_invoice">
+        <rdfs:label>matchedToInvoice</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/PurchaseOrder"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Invoice"/>
+        <rdfs:comment>A vendor invoice is three-way matched against the purchase order in Dynamics 365 Finance AP</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>purchaseOrder</ont:fromEntityId>
+        <ont:toEntityId>invoice</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → TrainingCourse -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_enrolled_in_trainingCourse">
+        <rdfs:label>enrolledInCourse</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/TrainingCourse"/>
+        <rdfs:comment>An employee is enrolled in learning courses through Microsoft Viva Learning</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>trainingCourse</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Employee → PerformanceReview -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/employee_has_performanceReview">
+        <rdfs:label>hasPerformanceReview</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/PerformanceReview"/>
+        <rdfs:comment>An employee undergoes performance reviews tracked in Dynamics 365 HR or Viva Goals</rdfs:comment>
+        <ont:cardinality>one-to-many</ont:cardinality>
+        <ont:fromEntityId>employee</ont:fromEntityId>
+        <ont:toEntityId>performanceReview</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- M365Tenant → Company -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/m365Tenant_belongs_to_company">
+        <rdfs:label>belongsToCompany</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/M365Tenant"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:comment>The Microsoft 365 tenant is owned by and associated with the enterprise company</rdfs:comment>
+        <ont:cardinality>one-to-one</ont:cardinality>
+        <ont:fromEntityId>m365Tenant</ont:fromEntityId>
+        <ont:toEntityId>company</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- AzureSubscription → Company -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/azureSubscription_owned_by_company">
+        <rdfs:label>ownedByCompany</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AzureSubscription"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:comment>An Azure subscription is billed to and governed by the enterprise company</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>azureSubscription</ont:fromEntityId>
+        <ont:toEntityId>company</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- D365Environment → Company -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/d365Environment_belongs_to_company">
+        <rdfs:label>belongsToCompany</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/D365Environment"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:comment>A Dynamics 365 environment is provisioned under and governed by the enterprise</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>d365Environment</ont:fromEntityId>
+        <ont:toEntityId>company</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- DataClassification → SharePointSite (applied to) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/dataClassification_applied_to_sharePointSite">
+        <rdfs:label>appliedToSite</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/DataClassification"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/SharePointSite"/>
+        <rdfs:comment>A Microsoft Purview sensitivity label or site classification is applied to a SharePoint site</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>dataClassification</ont:fromEntityId>
+        <ont:toEntityId>sharePointSite</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- AuditLog → Employee (Actor) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/auditLog_performed_by_employee">
+        <rdfs:label>performedByEmployee</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/AuditLog"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:comment>The audit log entry records an activity performed by a specific employee in the Microsoft 365 unified audit log</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>auditLog</ont:fromEntityId>
+        <ont:toEntityId>employee</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- CalendarEvent → Employee (Organizer) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/calendarEvent_organized_by_employee">
+        <rdfs:label>organizedBy</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/CalendarEvent"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:comment>The employee who created and is the organizer of the calendar event in Outlook or Teams</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>calendarEvent</ont:fromEntityId>
+        <ont:toEntityId>employee</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- CalendarEvent → Employee (Attendees) -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/calendarEvent_has_attendee_employee">
+        <rdfs:label>hasAttendee</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/CalendarEvent"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Employee"/>
+        <rdfs:comment>Employees invited as attendees to the Outlook or Teams meeting</rdfs:comment>
+        <ont:cardinality>many-to-many</ont:cardinality>
+        <ont:fromEntityId>calendarEvent</ont:fromEntityId>
+        <ont:toEntityId>employee</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- Office → Company -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/office_belongs_to_company">
+        <rdfs:label>belongsToCompany</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/Office"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/Company"/>
+        <rdfs:comment>A physical office location belongs to the enterprise company</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>office</ont:fromEntityId>
+        <ont:toEntityId>company</ont:toEntityId>
+    </owl:ObjectProperty>
+
+    <!-- FinanceJournal → CostCenter -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/enterprise-msft/financeJournal_charged_to_costCenter">
+        <rdfs:label>chargedToCostCenter</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/enterprise-msft/FinanceJournal"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/enterprise-msft/CostCenter"/>
+        <rdfs:comment>A journal entry in Dynamics 365 Finance is posted against a cost center in the chart of accounts</rdfs:comment>
+        <ont:cardinality>many-to-one</ont:cardinality>
+        <ont:fromEntityId>financeJournal</ont:fromEntityId>
+        <ont:toEntityId>costCenter</ont:toEntityId>
+    </owl:ObjectProperty>
+
+</rdf:RDF>
