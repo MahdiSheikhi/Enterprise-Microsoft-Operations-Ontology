@@ -8,9 +8,9 @@
 
 ## 📖 Overview
 
-This ontology formally describes how a large enterprise organization operates using Microsoft tools — from identity and collaboration through to cloud infrastructure, business applications, security, and finance. It is expressed in **OWL/XML (RDF)** and can be loaded into any standards-compliant ontology editor or knowledge graph platform.
+This ontology formally describes how a large enterprise organization operates using Microsoft tools — from identity and collaboration through to cloud infrastructure, business applications, security operations, and beyond.
 
-The model covers **30+ entity classes**, **100+ properties**, and **40+ named relationships** spanning the full Microsoft ecosystem: Microsoft 365, Azure, Dynamics 365, Power Platform, Microsoft Sentinel, Intune, and more.
+The model covers **30+ entity classes**, **100+ properties**, and **40+ named relationships** spanning the full Microsoft ecosystem: Microsoft 365, Azure, Dynamics 365, Power Platform, Microsoft Sentinel, and more.
 
 ---
 
@@ -36,12 +36,12 @@ Models the legal entity, divisional hierarchy, departmental breakdown, and finan
 ### 2. 👤 People & Identity
 `Employee` · `Contractor` · `Role` · `Team`
 
-Each employee is linked to their **Entra ID** account, **Outlook** mailbox, **OneDrive**, software licenses, hardware assets, and HR record. Manager hierarchy is captured via the `reportsTo` relationship.
+Each employee is linked to their **Entra ID** account, **Outlook** mailbox, **OneDrive**, software licenses, hardware assets, and HR record. Manager hierarchy is captured via the `reportsTo` relationship and team membership.
 
 ### 3. 📋 Projects & Agile Delivery
 `Project` · `Sprint` · `WorkItem` · `Milestone`
 
-Full project lifecycle tracked in **Azure DevOps** and **Dynamics 365 Project Operations**. Supports Agile methodologies (Scrum, SAFe, Kanban, Waterfall) with work item types: Epic, Feature, User Story, Task, Bug.
+Full project lifecycle tracked in **Azure DevOps** and **Dynamics 365 Project Operations**. Supports Agile methodologies (Scrum, SAFe, Kanban, Waterfall) with work item types: Epic, Feature, User Story, Bug, Task, and Test Case.
 
 ### 4. ☁️ Azure Cloud Infrastructure
 `AzureSubscription` · `AzureResourceGroup` · `AzureResource` · `AzurePolicy`
@@ -143,6 +143,15 @@ python3 -c "import xml.etree.ElementTree as ET; ET.parse('enterprise_microsoft_o
 | `rdf:` | `http://www.w3.org/1999/02/22-rdf-syntax-ns#` |
 | `rdfs:` | `http://www.w3.org/2000/01/rdf-schema#` |
 | `xsd:` | `http://www.w3.org/2001/XMLSchema#` |
+
+---
+
+## 🔨 Tools & Resources
+
+### Microsoft Ontology Playground
+**[@microsoft/Ontology-Playground](https://github.com/microsoft/Ontology-Playground)** | [https://microsoft.github.io/Ontology-Playground/](https://microsoft.github.io/Ontology-Playground/)
+
+A free, open-source web application for learning about ontologies and Microsoft Fabric IQ. Explore pre-built ontologies, design your own in a visual editor, export as RDF/XML, and share interactive diagrams — all from a fully static site with zero backend dependencies.
 
 ---
 
